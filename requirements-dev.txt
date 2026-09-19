@@ -1,7 +1,6 @@
 -r requirements.txt
 
-pytest==8.3.4
-pytest-cov==6.0.0
-ruff==0.8.4
-mypy==1.14.0
-types-requests==2.32.0.20241016
+pytest==9.1.1
+pytest-cov==7.1.0
+ruff==0.16.8
+mypy==2.3.1

@@ -1,20 +1,25 @@
 version: 2
 updates:
+  # One grouped PR per ecosystem per month. Ungrouped weekly updates produced
+  # a dozen PRs on day one, each burning a full CI run for a single bump.
   - package-ecosystem: pip
     directory: /
     schedule:
-      interval: weekly
-      day: monday
-    open-pull-requests-limit: 5
+      interval: monthly
+    open-pull-requests-limit: 1
     commit-message:
       prefix: "chore(deps)"
     groups:
-      python-minor-and-patch:
-        update-types: [minor, patch]
+      python:
+        patterns: ["*"]
 
   - package-ecosystem: github-actions
     directory: /
     schedule:
       interval: monthly
+    open-pull-requests-limit: 1
     commit-message:
       prefix: "chore(ci)"
+    groups:
+      actions:
+        patterns: ["*"]

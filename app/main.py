@@ -40,7 +40,7 @@ def create_app() -> FastAPI:
         title=settings.app_name,
         version="0.1.0",
         description=(
-            "Film catalog, theatre seating layouts, and AI seat recommendations " "for GoldSeats."
+            "Film catalog, theatre seating layouts, and AI seat recommendations for GoldSeats."
         ),
         openapi_url=None if settings.is_production else "/openapi.json",
         docs_url=None if settings.is_production else "/docs",
